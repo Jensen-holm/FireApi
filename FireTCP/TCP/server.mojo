@@ -64,7 +64,7 @@ struct TCPLite[S: Service](Server):
 
     @always_inline
     fn full_addr(self) raises -> String:
-        return str(self.host_addr) + "/" + String(self.port)
+        return str(self.host_addr) + "/" + str(self.port)
 
     @always_inline
     fn __update_metrics(inout self, et: Float64) -> None:
